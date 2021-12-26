@@ -3,7 +3,7 @@
 header {
   display: flex;
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   background-color: #191919;
   justify-content: space-between;
   align-items: center;
@@ -12,10 +12,10 @@ header {
   min-height: 5rem;
 }
 header::after {
+  content: "";
   background-color: #ffffff5d;
   position: absolute;
   bottom: 0;
-  content: "";
   height: 1px;
   left: 50%;
   transform: translate(-50%, 0);

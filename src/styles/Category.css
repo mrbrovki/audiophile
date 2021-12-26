@@ -5,7 +5,8 @@
   position: relative;
   overflow: visible;
   background-color: #f1f1f1;
-  border-radius: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
 }
 .prod-image {
@@ -13,18 +14,16 @@
   top: -60px;
   left: 50%;
   transform: translate(-50%, 0);
-  height: 180px;
+  height: 11rem;
 }
 .prod-name {
-  margin-top: 100px;
-  text-transform: uppercase;
+  margin-top: 6.5rem;
 }
 .category a {
   margin-top: 20px;
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
-  text-transform: uppercase;
   width: 5rem;
   text-align: center;
   color: #959595;
@@ -34,7 +33,6 @@
   animation: arrow-anim 2s infinite;
   width: 0.5rem;
 }
-
 @keyframes arrow-anim {
   0% {
     transform: translateX(0.1rem);

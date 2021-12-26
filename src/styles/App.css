@@ -5,11 +5,11 @@
 }
 .btn {
   width: 10rem;
-  margin-top: 2rem;
-  border-radius: 0.2rem;
-  font-size: 1rem;
-  color: #7d7d7d;
   line-height: 2.5rem;
   text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #7d7d7d;
   border: 2px solid #7d7d7d;
+  border-radius: 0.2rem;
 }
