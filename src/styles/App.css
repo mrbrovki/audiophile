@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.btn {
+  width: 10rem;
+  margin-top: 2rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  color: #7d7d7d;
+  line-height: 2.5rem;
+  text-align: center;
+  border: 2px solid #7d7d7d;
+}

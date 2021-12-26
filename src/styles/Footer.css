@@ -1,0 +1,27 @@
+footer {
+  margin-top: 10rem;
+  background-color: #101010;
+  min-height: 20rem;
+  overflow: hidden;
+  padding: 3rem 10vw 0rem 10vw;
+}
+
+footer nav {
+  float: right;
+  font-size: 0.8rem;
+  width: 25rem;
+}
+footer p {
+  margin-top: 4rem;
+  font-weight: 300;
+  color: #ffffff64;
+  font-family: "Mukta", sans-serif;
+  width: 33rem;
+  line-height: 1.3rem;
+  overflow: hidden;
+}
+
+footer > img {
+  float: right;
+  margin-left: 0.8rem;
+}

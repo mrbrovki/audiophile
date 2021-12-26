@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@100;300;500&display=swap");
+
+.hero {
+  background: url("../assets/home/desktop/image-hero.jpg") center/cover fixed;
+  font-family: "Mukta", sans-serif;
+  min-height: 100vh;
+  padding: 12rem 0rem 0rem 10vw;
+}
+.hero h1 {
+  overflow: hidden;
+  width: 500px;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+.hero h1::before {
+  display: block;
+  color: #414141;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  font-size: 1.2rem;
+  content: "NEW PRODUCT";
+}
+.hero p {
+  width: 350px;
+  font-weight: 100;
+  color: #ffffff9e;
+}
+.hero .orange {
+  color: #fff;
+  border: none;
+  background-color: #d87c49;
+}
+.content {
+  min-height: 2000px;
+  padding: 0 10vw 0 10vw;
+}
+.categories {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  margin-top: 10rem;
+  overflow: visible;
+}
+.products {
+  margin-top: 5rem;
+}
+.products > section {
+  margin-top: 3rem;
+}
+.products section {
+  border-radius: 1rem;
+}
+
+.zx9 {
+  background: url("../assets/home/desktop/image-speaker-zx9.png") 100px 100px/20rem
+      auto no-repeat,
+    url("../assets/home/desktop/pattern-circles.svg") -5rem -5rem / cover
+      no-repeat,
+    #d87c49;
+  height: 30rem;
+  font-family: "Mukta", sans-serif;
+  overflow-y: hidden;
+  padding-left: 28rem;
+}
+.zx9 h1 {
+  margin-top: 5rem;
+  letter-spacing: 0.2rem;
+  overflow-y: hidden;
+  width: 22rem;
+  line-height: 4rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fdfbf7;
+}
+.zx9 p {
+  width: 22rem;
+  color: #ffbf99;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+}
+
+.black {
+  background-color: black;
+  border-color: black;
+  color: #ffffffb8;
+}
+.zx7,
+.yx1 {
+  text-transform: uppercase;
+  font-family: "Mukta", sans-serif;
+  padding-top: 6rem;
+  height: 20rem;
+}
+
+.zx7 {
+  background: url("../assets/home/desktop/image-speaker-zx7.jpg");
+  padding-left: 5rem;
+}
+.yx1 {
+  background: url("../assets/home/desktop/image-earphones-yx1.jpg");
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  font-family: "Mukta", sans-serif;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.grid-container .right {
+  background-color: #f1f1f1;
+  padding-top: 6rem;
+  padding-left: 5rem;
+}
+.grid-container h1 {
+  overflow: hidden;
+  margin-top: 10rem;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 2.8rem;
+  width: 30rem;
+}
+.grid-container p {
+  text-transform: none;
+  margin-top: 2rem;
+  color: #414141;
+  width: 27rem;
+}
+.grid-container span {
+  color: #ca8d6a;
+}
+.grid-container img {
+  width: 32rem;
+  border-radius: 1rem;
+}
+
+.transparent {
+  color: black;
+  font-family: "Mukta", sans-serif;
+  border-color: black;
+}

@@ -1,0 +1,48 @@
+.category {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.prod-image {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 180px;
+}
+.prod-name {
+  margin-top: 100px;
+  text-transform: uppercase;
+}
+.category a {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 5rem;
+  text-align: center;
+  color: #959595;
+}
+.arrow {
+  vertical-align: -1px;
+  animation: arrow-anim 2s infinite;
+  width: 0.5rem;
+}
+
+@keyframes arrow-anim {
+  0% {
+    transform: translateX(0.1rem);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0.1rem);
+  }
+}
