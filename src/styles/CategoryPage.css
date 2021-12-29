@@ -1,0 +1,28 @@
+.cat-page .cat-heading {
+  position: fixed;
+  z-index: -10;
+  margin-top: 5rem;
+  line-height: 20rem;
+  width: 100vw;
+  background-color: #191919;
+  color: white;
+  font-family: "Mukta", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+.cat-page .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+}
+.cat-page .flex-container:nth-child(even) {
+  flex-flow: row-reverse nowrap;
+}
+.category-items {
+  margin-top: 25rem;
+  background-color: white;
+  padding: 0 10vw 14rem;
+}

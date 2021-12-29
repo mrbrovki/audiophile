@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/NoPage.css'
 const NoPage = () => {
  return (
-   <div style={{color: 'white'}}>
+   <div style={{marginTop: '120px'}}>
    no page
   </div>
  )

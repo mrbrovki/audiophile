@@ -1,0 +1,26 @@
+.others h3 {
+  margin: 8rem 0 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+}
+.others .flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.others img {
+  border-radius: 0.5rem;
+  height: 20rem;
+}
+.others p {
+  margin: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.others a {
+  margin: 1rem auto;
+}

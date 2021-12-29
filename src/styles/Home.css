@@ -1,81 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@100;300;500&display=swap");
-
-.hero {
-  background: url("../assets/home/desktop/image-hero.jpg") center/cover fixed;
-  font-family: "Mukta", sans-serif;
-  min-height: 100vh;
-  padding: 12rem 0rem 0rem 10vw;
-}
-.hero > h1 {
-  overflow: hidden;
-  width: 500px;
-  font-size: 4rem;
-  line-height: 4rem;
-  font-weight: 500;
-  color: #fff;
-  text-transform: uppercase;
-}
-.hero > h1::before {
-  display: block;
-  color: #414141;
-  font-weight: 500;
-  letter-spacing: 0.4rem;
-  font-size: 1.2rem;
-  content: "NEW PRODUCT";
-}
-.hero > p {
-  width: 350px;
-  font-weight: 100;
-  color: #ffffff9e;
-}
-.hero > .orange {
-  color: #fff;
-  border: none;
-  background-color: #d87c49;
-}
-
 .content {
-  padding: 0 10vw 0 10vw;
+  padding: 0 10vw 14rem;
   font-family: "Mukta", sans-serif;
-}
-.content > .categories {
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
-  margin-top: 10rem;
-  overflow: visible;
 }
 .content > .products {
   margin-top: 5rem;
 }
 .content h1 {
   text-transform: uppercase;
-}
-.content span {
-  color: #ca8d6a;
-}
-.content > .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
-}
-.content > .grid-container h1 {
-  overflow: hidden;
-  margin-top: 8rem;
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 2.8rem;
-  width: 28rem;
-}
-.content > .grid-container p {
-  margin-top: 2rem;
-  color: #414141;
-  width: 26rem;
-}
-.content > .grid-container img {
-  border-radius: 1rem;
-  width: calc(40vw - 2rem);
 }
 
 .products > section {
@@ -131,14 +62,4 @@
 }
 .yx1-image {
   background: url("../assets/home/desktop/image-earphones-yx1.jpg");
-}
-
-.black {
-  background-color: black;
-  border-color: black;
-  color: #ffffffb8;
-}
-.transparent {
-  color: black;
-  border-color: black;
 }

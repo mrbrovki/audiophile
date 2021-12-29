@@ -33,6 +33,14 @@
   animation: arrow-anim 2s infinite;
   width: 0.5rem;
 }
+.categories {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  margin-top: 10rem;
+  overflow: visible;
+}
 @keyframes arrow-anim {
   0% {
     transform: translateX(0.1rem);

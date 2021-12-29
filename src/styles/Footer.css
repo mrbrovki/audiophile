@@ -1,5 +1,4 @@
 footer {
-  margin-top: 14rem;
   background-color: #101010;
   min-height: 20rem;
   overflow: hidden;
@@ -21,7 +20,10 @@ footer > p {
   overflow: hidden;
 }
 
-footer > img {
+footer > a {
   float: right;
   margin-left: 0.8rem;
+}
+footer .brand {
+  float: left;
 }

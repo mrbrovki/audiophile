@@ -1,0 +1,28 @@
+.hero {
+  background: url("../assets/home/desktop/image-hero.jpg") center/cover fixed;
+  font-family: "Mukta", sans-serif;
+  min-height: 100vh;
+  padding: 12rem 0rem 0rem 10vw;
+}
+.hero > h1 {
+  overflow: hidden;
+  width: 500px;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+.hero > h1::before {
+  display: block;
+  color: #414141;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  font-size: 1.2rem;
+  content: "NEW PRODUCT";
+}
+.hero > p {
+  width: 350px;
+  font-weight: 100;
+  color: #ffffff9e;
+}
