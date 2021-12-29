@@ -10,7 +10,7 @@ import '../../styles/ProductPage.css'
 const ProductPage = () => {
   const navigate = useNavigate(); 
   const {id} = useParams();
-  const {features, includes, gallery, others} = data[id];
+  const {features, includes, gallery, others} = data[id - 1];
   const items = includes.map((el, index) => {
  return (
  <div key={index}>
@@ -26,7 +26,7 @@ const ProductPage = () => {
  return (
   <section className='product'>
     <button onClick={() => navigate(-1)} className='go-back'>Go Back</button>
-   <Product id={id} type='prodPage'/>
+   <Product id={id - 1} type='prodPage'/>
    <section className='features'>
    <h2>features</h2>
    <p>{features}</p>

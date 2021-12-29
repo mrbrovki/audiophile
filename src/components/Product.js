@@ -49,7 +49,7 @@ else{
          <p className='new'>{isNew && 'NEW PRODUCT'}</p>
          <h1 className='name'>{name}</h1>
          <p className='description'>{description}</p>
-         <Link to={'/' + category + '/' + id} className='btn orange'>SEE PRODUCT</Link>
+         <Link to={'/' + category + '/' + (id + 1)} className='btn orange'>SEE PRODUCT</Link>
      </section>
     </section>
   )
