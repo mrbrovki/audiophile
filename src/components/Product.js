@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import {Link} from 'react-router-dom'
 import data from '../data.json'
+import { Context } from './App'
 
-const Product = ({id, type}) => {
-  const {name, image: {desktop}, description, new: isNew, price, category} = data[id];
-  const dot = (num) =>{
+export const dot = (num) =>{
  const numStr = String(num);
  const numArr = numStr.split('');
  const newArr = [];
@@ -16,8 +15,34 @@ const Product = ({id, type}) => {
  }
  newArr.unshift(numArr[0]);
  return newArr.join('');
-  }
+}
+
+const Product = ({index, type}) => {
+ const {setProducts} = useContext(Context);
+  const {name, image: {desktop}, description, new: isNew, price, category} = data[index];
   const [amount, setAmount] = useState(0);
+  const handleClick = () => {
+    if(amount > 0){
+      setProducts(prev => {
+        let isMatch = false;
+        const newArr = prev.map(item =>{
+          if(item.index === index){
+            isMatch = true;
+            return {index: item.index, amount: item.amount + amount};
+          }
+          else{
+            return item;
+          }
+        });
+        if(isMatch){
+          return newArr;
+        }
+        else{
+          return [...newArr, {index: index, amount: amount}];
+        }
+      });
+    }
+  };
 if(type === 'prodPage'){
   return (
        <section className='flex-container'>
@@ -28,14 +53,13 @@ if(type === 'prodPage'){
          <p className='description'>{description}</p>
          <p className='price'>$ {dot(price)}</p>
          <section>
-           <div className='flex-container counter'>
-             <span className='decrease' 
-               onClick={() => setAmount(prev => {
-                 return prev === 0 ? 0 : prev - 1; })}>-</span>
-             <span style={{color: '#000'}}>{amount}</span>
-             <span className='increase' onClick={() => setAmount(prev => prev + 1)}>+</span>
+            <div className='flex-container counter'>
+          <span className='decrease' onClick={() => setAmount(prev => {
+            return prev === 0 ? 0 : prev - 1; })}>-</span>
+          <span style={{color: '#000'}}>{amount}</span>
+          <span className='increase' onClick={() => setAmount(prev => prev + 1)}>+</span>
            </div>
-           <div className='add-to-cart-btn'>add to cart</div>
+           <div className='add-to-cart-btn' onClick={handleClick}>add to cart</div>
          </section>
      </section>
     </section>
@@ -49,7 +73,7 @@ else{
          <p className='new'>{isNew && 'NEW PRODUCT'}</p>
          <h1 className='name'>{name}</h1>
          <p className='description'>{description}</p>
-         <Link to={'/' + category + '/' + (id + 1)} className='btn orange'>SEE PRODUCT</Link>
+         <Link to={'/' + category + '/' + (index + 1)} className='btn orange'>SEE PRODUCT</Link>
      </section>
     </section>
   )

@@ -14,18 +14,18 @@ const Home = () => {
       <section className='zx9'>
         <h1>zx9 speaker</h1>
         <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-        <Link to='/speakers/5' className='btn transparent'>SEE PRODUCT</Link>
+        <Link to='/speakers/6' className='btn transparent'>SEE PRODUCT</Link>
       </section>
       <section className='zx7'>
         <h2>zx7 speaker</h2>
-        <Link to='/speakers/4' className='btn transparent'>SEE PRODUCT</Link>
+        <Link to='/speakers/5' className='btn transparent'>SEE PRODUCT</Link>
       </section>
       <section className='grid-container'>
         <section className='yx1-image'>
         </section>
         <section className='yx1'>
         <h2>yx1 earphones</h2>
-        <Link to='/earphones/0' className='btn transparent'>SEE PRODUCT</Link>
+        <Link to='/earphones/1' className='btn transparent'>SEE PRODUCT</Link>
         </section>
       </section>
     </section>

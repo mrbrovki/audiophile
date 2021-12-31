@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
 import data from '../../data.json'
 import Categories from '../Categories'
@@ -19,14 +19,16 @@ const ProductPage = () => {
  <br />
  </div>
   )});
-
- document.body.scrollTop = 0; // For Safari
+ useEffect(() =>{
+  document.body.scrollTop = 0; // For Safari
  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+ });
 
  return (
   <section className='product'>
     <button onClick={() => navigate(-1)} className='go-back'>Go Back</button>
-   <Product id={id - 1} type='prodPage'/>
+      <Product index={id - 1} type='prodPage'/>
    <section className='features'>
    <h2>features</h2>
    <p>{features}</p>

@@ -7,6 +7,7 @@
   color: #ca8d6a;
 }
 .gear h1 {
+  text-transform: uppercase;
   overflow: hidden;
   margin-top: 8rem;
   font-weight: 700;
