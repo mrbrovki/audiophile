@@ -46,3 +46,12 @@ body {
 .go-back:hover {
   cursor: pointer;
 }
+.transparent:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+.orange:hover {
+  background-color: #e9773a;
+  transition: 0.3s;
+}
