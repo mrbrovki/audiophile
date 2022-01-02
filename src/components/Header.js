@@ -27,7 +27,7 @@ const Header = () => {
       <img className='cart-icon' src='/assets/shared/desktop/icon-cart.svg'/>
   </div>
       <div className={'cart-items ' + visibility}> 
-            <CartItems/>
+            <CartItems setVisibility={setVisibility}/>
       </div>
 
   </header>

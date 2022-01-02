@@ -1,18 +1,20 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect} from 'react'
 import { Context } from './App'
 import { dot } from './Product'
 import data from '../data.json'
 import Counter from './Counter'
 import { Link } from 'react-router-dom'
 
-const CartItems = () => {
- const {products, setProducts} = useContext(Context);
- let total = products.reduce((total, item) => {
- const {index, amount} = item;
- total.amount += amount;
- total.totalPrice += data[index].price * amount;
- return total;
-}, {amount: 0, totalPrice:0});
+const CartItems = (props) => {
+ const {products, setProducts, total, setTotal} = useContext(Context);
+ useEffect(() =>{
+  setTotal(products.reduce((total, item) => {
+   const {index, amount} = item;
+   total.amount += amount;
+   total.totalPrice += data[index].price * amount;
+   return total;
+  }, {amount: 0, totalPrice:0}))
+ }, [products]);
 
  const items = products.map(el => {
   const item = data[el.index];
@@ -43,7 +45,7 @@ const removeItems = () => {
       <p id='total-price'>${dot(total.totalPrice)}</p>
     </section>
     <section className='cart-checkout'>
-      <Link to='' className='btn orange'>CHECKOUT</Link>
+      <Link to='/checkout' className='btn orange'onClick={() => props.setVisibility('hidden')}>CHECKOUT</Link>
     </section>
   </section>
  )

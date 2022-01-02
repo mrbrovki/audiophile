@@ -96,7 +96,8 @@ nav a {
   margin-top: 0.8rem;
 }
 .item p {
-  color: #191919d5;
+  color: #19191993;
+  font-weight: 700;
 }
 
 .cart-counter {
