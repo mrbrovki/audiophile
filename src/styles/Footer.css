@@ -20,10 +20,36 @@ footer > p {
   overflow: hidden;
 }
 
-footer > a {
+footer a {
+  text-transform: uppercase;
   float: right;
   margin-left: 0.8rem;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffffb3;
 }
 footer .brand {
   float: left;
+}
+.footer-mobile,
+.footer-mobile nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer-mobile nav > a {
+  display: block;
+  float: none;
+  margin-top: 1rem;
+}
+.footer-mobile p {
+  width: 100%;
+}
+.footer-mobile p {
+  margin-top: 2rem;
+}
+.footer-mobile section {
+  margin: 2rem;
 }

@@ -1,7 +1,8 @@
-import React, {useContext, useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import data from '../data.json'
 import { Context } from './App'
+
 
 export const dot = (num) =>{
  const numStr = String(num);
@@ -18,9 +19,9 @@ export const dot = (num) =>{
 }
 
 const Product = ({index, type}) => {
- const {setProducts} = useContext(Context);
-  const {name, image: {desktop}, description, new: isNew, price, category} = data[index];
-  const [amount, setAmount] = useState(0);
+ const {responsive, setProducts} = useContext(Context);
+ const {name, image, description, new: isNew, price, category} = data[index];
+ const [amount, setAmount] = useState(0);
   const handleClick = () => {
     if(amount > 0){
       setProducts(prev => {
@@ -44,10 +45,10 @@ const Product = ({index, type}) => {
     }
   };
 if(type === 'prodPage'){
-  return (
-       <section className='flex-container'>
-       <img src={desktop.slice(1)} className='product-image'/>
-       <section className='ndpc'>
+    return (
+      <section className='flex-container'>
+       <img src={image[`${responsive}`].slice(1)} className={'product-image-' + responsive}/>
+       <section className={'ndpc ndpc-' + responsive}>
          <p className='new'>{isNew && 'NEW PRODUCT'}</p>
          <h1 className='name'>{name}</h1>
          <p className='description'>{description}</p>
@@ -64,12 +65,15 @@ if(type === 'prodPage'){
      </section>
     </section>
   )
+
 }
-else{
-  return(
-       <section className='flex-container'>
-       <img src={desktop.slice(1)} className='product-image'/>
-       <section className='ndpc'>
+else {
+    return(
+      <section className={'flex-container flex-container-' + responsive}>
+        {responsive === 'tablet' ? <div className='background'>
+       <img src ={image[`${responsive}`]}  className={'product-image-' + responsive}/>
+        </div> : <img src ={image[`${responsive}`]}  className={'product-image-' + responsive}/>}
+       <section className={'ndpc ndpc-' + responsive}>
          <p className='new'>{isNew && 'NEW PRODUCT'}</p>
          <h1 className='name'>{name}</h1>
          <p className='description'>{description}</p>
@@ -77,6 +81,7 @@ else{
      </section>
     </section>
   )
+
 }
 }
 

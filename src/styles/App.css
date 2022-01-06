@@ -29,7 +29,13 @@ body {
 .black {
   background-color: black;
   border-color: black;
-  color: #ffffffb8;
+  color: #fff;
+}
+.black:hover {
+  color: black;
+  border-color: black;
+  transition: 0.3s;
+  background: none;
 }
 .transparent {
   color: black;

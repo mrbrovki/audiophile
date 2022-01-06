@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react'
+import React, {createContext, useEffect, useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
 import '../styles/App.css'
 import Layout from './pages/Layout'
@@ -12,8 +12,27 @@ export const Context = createContext();
 const App = () => {
   const [products, setProducts] = useState([]);
   const [total, setTotal] = useState(0);
+  const [size, setSize] = useState(window.innerWidth);
+  const [responsive, setResponsive] = useState('desktop');
+  const checkSize = () =>{
+    if(size > 1024){
+      setResponsive('desktop');
+        } 
+    else if(size >= 768){
+      setResponsive('tablet');
+    }
+    else{
+      setResponsive('mobile');
+    }
+  }
+  useEffect(()=>{
+    window.addEventListener('resize',()=>{
+      setSize(window.innerWidth);
+    });
+    checkSize();
+  });
   return (
-    <Context.Provider value={{products, setProducts, total, setTotal}}>
+    <Context.Provider value={{responsive, products, setProducts, total, setTotal}}>
     <Routes>
     <Route path='/' element={<Layout />}>
      <Route index element={<Home />}/>

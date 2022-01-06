@@ -23,17 +23,6 @@ header::after {
   width: 80vw;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  width: 500px;
-}
-nav a {
-  text-decoration: none;
-  font-family: "Josefin Sans", sans-serif;
-  color: #ffffffb3;
-}
 .cart {
   position: relative;
   overflow: visible;
@@ -45,7 +34,7 @@ nav a {
   position: absolute;
   padding: 3rem 0 6.5rem;
   top: 8rem;
-  right: 10rem;
+  right: 8vw;
   height: 28rem;
   width: 22rem;
   z-index: 100;
@@ -147,4 +136,29 @@ nav a {
   position: absolute;
   top: 1rem;
   width: 18rem;
+}
+.cart-items-mobile {
+  width: 18rem;
+  margin: 0 4vw;
+}
+.cart-items-mobile .btn {
+  width: 14rem;
+}
+.cart-items-mobile #ct .top {
+  width: 14rem;
+}
+.cart-items-mobile .total {
+  width: 14rem;
+}
+.cart-items-mobile .cart-counter {
+  width: 4rem;
+}
+.hamburger {
+  width: 1.5rem;
+  position: relative;
+}
+.hamburger:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.2);
 }

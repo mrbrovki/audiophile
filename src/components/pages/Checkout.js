@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import '../../styles/Checkout.css'
+import { Context } from '../App';
 import Summary from '../Summary';
 const Checkout = () => {
+  const {responsive} = useContext(Context);
  const navigate = useNavigate(); 
  const [isEMoney, setIsEMoney] = useState(true);
  return (
   <div className='checkout-background'>
    <button onClick={() => navigate(-1)} className='go-back'>Go Back</button>
-   <div className='flex-container'>
+   <div className={'flex-container flex-container-'+responsive}>
    <section className='checkout'>
      <form>
      <fieldset>
@@ -28,7 +29,7 @@ const Checkout = () => {
       </section>
       <p>SHIPPING INFO</p>
       <section className='shipping-info'>
-      <label htmlFor='address' style={{gridColumn: '1 / span 2'}}>Address
+      <label htmlFor='address'>Address
       <input style={{width: '100%'}} type='text' id='address' placeholder='1137 Williams Avenue' />
       </label>
       <label htmlFor='zip'>ZIP Code
@@ -51,7 +52,6 @@ const Checkout = () => {
         e-Money</label>
        <label htmlFor='cash' 
        className={'border ' + `${!isEMoney && 'border-checked'}`} 
-       style={{gridColumn: '2 / span 1'}} 
        onClick={() => setIsEMoney(false)}>
        <input type='radio' id='cash' name='method'  value='cash'/>
         Cash on Delivery</label>

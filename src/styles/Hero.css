@@ -1,9 +1,32 @@
 .hero {
-  background: url("../assets/home/desktop/image-hero.jpg") center/cover fixed;
-  font-family: "Mukta", sans-serif;
-  min-height: 100vh;
-  padding: 12rem 0rem 0rem 10vw;
+  height: 100vh;
+  padding: 12rem 10vw 0 10vw;
+  width: 100vw;
 }
+.hero-desktop {
+  background: url("../assets/home/desktop/image-hero.jpg") center/cover fixed;
+}
+.hero-tablet,
+.hero-mobile {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-tablet {
+  background: url("../assets/home/tablet/image-hero.jpg") top center/contain
+      fixed no-repeat,
+    #1a1a1a;
+  height: 80vw;
+}
+.hero-mobile {
+  background: url("../assets/home/mobile/image-hero.jpg") center/contain fixed
+      no-repeat,
+    #1a1a1a;
+  height: 100vh;
+}
+
 .hero > h1 {
   overflow: hidden;
   width: 500px;
@@ -12,6 +35,9 @@
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
+}
+.mobile h1 {
+  font-size: 3rem;
 }
 .hero > h1::before {
   display: block;
@@ -25,4 +51,7 @@
   width: 350px;
   font-weight: 100;
   color: #ffffff9e;
+}
+.hero-mobile h1 {
+  font-size: calc(8vw + 1rem);
 }

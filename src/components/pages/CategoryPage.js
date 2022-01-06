@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Product from '../Product'
 import data from '../../data.json'
 import '../../styles/CategoryPage.css'
+
 const CategoryPage = () => {
  const {category} = useParams();
  const categoryProducts = data.map((item, index) => {

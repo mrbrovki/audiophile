@@ -1,6 +1,6 @@
 .checkout-background {
   background-color: #f1f1f1;
-  padding: 5rem 8rem;
+  padding: 5rem 5vw;
 }
 
 .checkout h1 {
@@ -18,7 +18,7 @@
   padding: 3rem;
   border-radius: 0.5rem;
   border: none;
-  width: 46rem;
+  width: 60vw;
 }
 .billing-details,
 .shipping-info,
@@ -45,7 +45,14 @@
   line-height: 3rem;
   padding-left: 2rem;
 }
-
+.flex-container-desktop .shipping-info label:first-child,
+.flex-container-tablet .shipping-info label:first-child {
+  grid-column: 1 / span 2;
+}
+.flex-container-desktop .payment-details label:nth-child(3),
+.flex-container-tablet .payment-details label:nth-child(3) {
+  grid-column: 2 / span 1;
+}
 .payment-details input {
   margin-right: 1rem;
 }
@@ -68,7 +75,7 @@
 .summary {
   background-color: #fff;
   border-radius: 0.5rem;
-  width: 21rem;
+  width: calc(10vw + 10rem);
   min-height: 31rem;
   text-transform: uppercase;
   padding: 1.5rem;
@@ -87,10 +94,31 @@
   font-weight: 700;
 }
 .summary .btn {
-  width: 18rem;
+  width: 100%;
 }
 .summary-total {
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
+}
+.checkout-background .flex-container-tablet,
+.checkout-background .flex-container-mobile {
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.flex-container-tablet .summary,
+.flex-container-tablet .checkout fieldset,
+.flex-container-mobile .summary,
+.flex-container-mobile .checkout fieldset {
+  margin: 2rem 0;
+  width: 80vw;
+}
+
+.flex-container-mobile .billing-details,
+.flex-container-mobile .shipping-info,
+.flex-container-mobile .payment-details,
+.flex-container-mobile .e-money {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
 }

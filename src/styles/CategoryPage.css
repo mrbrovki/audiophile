@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .cat-page .flex-container:nth-child(even) {
   flex-flow: row-reverse nowrap;
@@ -25,4 +25,27 @@
   margin-top: 25rem;
   background-color: white;
   padding: 0 10vw 14rem;
+}
+.cat-page .background {
+  background-color: #f1f1f1;
+  text-align: center;
+  width: 100%;
+}
+.cat-page .flex-container-mobile,
+.cat-page .flex-container-tablet,
+.cat-page .flex-container-mobile:nth-child(even),
+.cat-page .flex-container-tablet:nth-child(even) {
+  flex-flow: column nowrap;
+}
+.flex-container-tablet .ndpc,
+.flex-container-mobile .ndpc {
+  margin-top: 5rem;
+  text-align: center;
+}
+.cat-page .product-image-mobile {
+  width: 100%;
+}
+.cat-page .flex-container-tablet a,
+.cat-page .flex-container-mobile a {
+  margin: 0 auto;
 }

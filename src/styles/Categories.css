@@ -1,6 +1,6 @@
 .category {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   align-items: center;
   position: relative;
   overflow: visible;
@@ -17,14 +17,15 @@
   height: 11rem;
 }
 .prod-name {
-  margin-top: 6.5rem;
+  margin: 5rem 0 1rem;
+  color: black;
+  font-size: 1rem;
 }
 .category a {
   margin-top: 20px;
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
-  width: 5rem;
   text-align: center;
   color: #959595;
 }
@@ -51,4 +52,11 @@
   100% {
     transform: translateX(0.1rem);
   }
+}
+.categories-mobile {
+  margin-top: 6rem;
+  grid-template-columns: 1fr;
+}
+.categories-mobile > .category {
+  margin-top: 2rem;
 }

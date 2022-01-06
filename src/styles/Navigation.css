@@ -1,0 +1,41 @@
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 500px;
+}
+.desktop a {
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffffb3;
+}
+.tablet-mobile {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 5rem;
+  overflow-y: hidden;
+  width: 10rem;
+  max-height: 0rem;
+}
+.show {
+  max-height: 28rem;
+  transition: 1s;
+}
+ul li {
+  margin-left: -2.5rem;
+  list-style-type: none;
+}
+.tablet-mobile a {
+  text-decoration: none;
+  padding-left: 1rem;
+  line-height: 3rem;
+  display: block;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+.tablet-mobile a:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: 0.2s;
+}
